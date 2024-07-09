@@ -19,6 +19,7 @@ import { Label } from "@/Components/ui/label/index.js";
 
 const props = defineProps({
     tweets: Object,
+    follows: Object,
 });
 
 const form = useForm({
@@ -45,7 +46,9 @@ const like = (id) => {
                 <CardHeader>
                     <Label class="font-bold text-lg">Who to Follow</Label>
                 </CardHeader>
-                <CardContent> list</CardContent>
+                <CardContent v-for="follow in follows">{{
+                    follow.name
+                }}</CardContent>
             </Card>
         </template>
         <div class="space-y-2">
