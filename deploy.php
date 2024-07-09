@@ -5,6 +5,12 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Config
+task('build', function () {
+    cd('{{release_path}}');
+    run('npm install');
+    run('npm run build');
+});
+
 
 set('repository', 'https://github.com/mai92/sosmed');
 
@@ -21,3 +27,4 @@ host('103.127.133.35')
 // Hooks
 
 after('deploy:failed', 'deploy:unlock');
+after('deploy', 'build');
