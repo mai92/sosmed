@@ -37,7 +37,7 @@ const submit = () => {
 
     <div class="h-[800px] md:grid md:grid-cols-2">
         <div class="h-full flex justify-center items-center">
-            <h1 class="font-bold text-3xl">Cuit</h1>
+            <h1 class="font-bold text-3xl">Cuitsss</h1>
         </div>
         <div class="bg-secondary h-full items-center flex justify-center">
             <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
