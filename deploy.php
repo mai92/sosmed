@@ -25,6 +25,5 @@ host('103.127.133.35')
     ->set('deploy_path', '/var/www/sayamirul.com');
 
 // Hooks
-
-after('deploy:failed', 'deploy:unlock');
 after('deploy', 'build');
+after('deploy:failed', 'deploy:unlock');
